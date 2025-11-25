@@ -1,6 +1,6 @@
 const taskInput = document.querySelector('.row input');
 const addButton = document.getElementById('add-btn');
-const todoBox = document.querySelector('.todo-list');
+const todoBox = document.querySelector('ul');
 
 // Add event listener to the add button
 addButton.addEventListener("click", addTodo);
@@ -30,8 +30,3 @@ function addTodo() {
 }
 
 // Event delegation for deleting tasks
-function deleteTask() {
-    if (span.addEventListener("click")) {
-        li.todoBox.removeChild(li);
-    }
-}
