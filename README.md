@@ -15,18 +15,18 @@ User's data get retrieved even if browser tab or browser get closed.
 - I coded the site with html, css.
 - Later I added functionality to the site with JavaScript
   
-# What I learned
+What I learned
 I new css uses like the user-select, working with pseudo-elements ::before and ::after.
 I also learnt how to add eventListener "click" event, Saving data to the browser.
 
-# What I Could improved
+What I Could improved
 - Responsiveness: so that it works on different screen sizes or devices.
 - Editing: Users should be able to edit save task.
 - Categorization of task: User should be able to categorize their tasks or whether a task is completed or uncompleted.
 
 🌐 How to use the App
 Use the link below to access the site and add your task, mark as complete or uncomplete and also get to delete them
-[Add link]
+https://beclifford.github.io/to-do-list/
 
 🚀 Demo & Visuals
 Here is a short video demonstration of the application in action.
