@@ -3,26 +3,28 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <!-- <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet"> -->
+    <!-- <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'> -->
     <link rel="stylesheet" href="style.css">
     <title>Document</title>
 </head>
 <body>
     <div class="wrapper">
-        <h2>To-do List</h2>
-        <div class="row">
-            <input type="text" class="input-field" placeholder="Add your task here">
-            <button id="add-btn">Add</button>
+        <h1>To-do List</h1>
+        <div class="entry-box">
+            <input type="text" class="input-box" placeholder="Add your new task">
+            <button class="add-btn">Add</button>
         </div>
 
-        <ul>
+        <ul class="todo-list">
             <!-- List items will be added here dynamically -->
-            <!-- <li class="checked">Task 1</li>
-            <li>Task 2</li>
-            <li>Task 3</li> -->
+             <!-- <li class="checked">Do laundry</li>
+             <li>Clean up</li>
+             <li>Bulk ironing</li> -->
         </ul>
     </div>
-    
-
 
     <script src="script.js"></script>
 </body>

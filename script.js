@@ -1,32 +1,51 @@
-const taskInput = document.querySelector('.row input');
-const addButton = document.getElementById('add-btn');
-const todoBox = document.querySelector('ul');
+// Selecting DOM elements
+const userInput = document.querySelector(".input-box");
+const addButton = document.querySelector(".add-btn");
+const todo = document.querySelector(".todo-list");
 
-// Add event listener to the add button
-addButton.addEventListener("click", addTodo);
-span.addEventListener("click", deleteTask);
+// Event listener for the add button
+addButton.addEventListener("click", function()  {
+    const inputValue = userInput.value.trim();
 
-
-
-// Create a function to add a new todo item
-function addTodo() {
-    const newTask = taskInput.value.trim(); 
-
-    if (newTask !== "") {
+    if (inputValue === "") {
+        alert("Please enter a task")
+    } else {
         let li = document.createElement("li");
-        li.innerHTML = newTask;
-        li.className = "list-item";
-        todoBox.appendChild(li);
+        li.textContent = inputValue;
+        li.className = "listItem";
+        todo.appendChild(li);
 
         let span = document.createElement("span");
-        span.innerHTML = "\u00d7"; // Placeholder for trash can icon
-        span.className = "trash-icon";
+        span.innerHTML = "\u00D7";
+        span.className = "delete";
         li.appendChild(span);
-    } else {
-        alert("Add todo function called");
     }
 
-    taskInput.value = "";
+    userInput.value = "";
+    saveData()
+});
+
+
+// // Event delegation for delete functionality
+todo.addEventListener("click", function(e)  {
+    const target = e.target;
+    if (target.tagName === "LI") {
+        target.classList.toggle("checked");
+        saveData()
+    } else if (target.classList.contains("delete") || target.tagName === "SPAN") {
+        target.parentElement.remove();
+        saveData()
+    }
+}, false);
+
+// Save list items to a local Storage
+function saveData() {
+    localStorage.setItem("data", todo.innerHTML);
 }
 
-// Event delegation for deleting tasks
+function retrieveData(data) {
+    todo.innerHTML = localStorage.getItem("data");
+}
+
+retrieveData()
+
